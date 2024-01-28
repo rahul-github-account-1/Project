@@ -106,5 +106,27 @@ This Node.js server interacts with the `interactsh-client` to fetch and filter i
       }
   ]
     ```
-  - **Response Example**:
+  - **We can also specify the start and end time stamps in request body to get specific interactions within a time window**:
+     ```json
+     {
+        "url":"cmr87qn2iceg506r9t60o4xkdpmh84tx4.oast.me",
+        "start":"2024-01-28 16:51:41",
+        "end":"2024-01-28 16:56:53"
+     }    
+
+    ```
+  - **Resonse we get now is**
+      ```json
+      [
+        {
+            "2024-01-28 16:51:41": "[cmr87qn2iceg506r9t60o4xkdpmh84tx4] Received HTTP interaction from 1.187.220.60 at 2024-01-28 16:51:41"
+        },
+        {
+            "2024-01-28 16:56:53": "[cmr87qn2iceg506r9t60o4xkdpmh84tx4] Received HTTP interaction from 1.187.220.60 at 2024-01-28 16:56:53"
+        }
+      ]
+
+
+      ```
+       
 
