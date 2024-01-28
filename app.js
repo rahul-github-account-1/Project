@@ -10,7 +10,7 @@ const interactshURL = '';
 
 app.use(bodyParser.json());
 
-let shuru = '', accumulatedData = '';
+let url = '', accumulatedData = '';
 const interactionArr = [];
 let acc = {};
 subProcess.stdout.on('data', (data) => {
@@ -54,9 +54,9 @@ subProcess.stderr.on('data', (data) => {
   // const urlMatch = accumulatedData.match(/\[INF\] Listing 1 payload for OOB Testing\n\[INF\] (.+)$/m);
   // console.log("urlMatch", x[x.length - 1]);
 
-  shuru = x[x.length - 1];
+  url = x[x.length - 1];
 
-  shuru = shuru.slice(0, -1)
+  url = url.slice(0, -1)
 
 
   // if (urlMatch && urlMatch[1]) {
@@ -76,7 +76,7 @@ subProcess.on('close', (code) => {
 });
 
 app.get('/api/getURL', (req, res) => {
-  res.json({ shuru })
+  res.json({ url })
 })
 
 
