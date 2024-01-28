@@ -56,7 +56,7 @@ This Node.js server interacts with the `interactsh-client` to fetch and filter i
 
 - **Endpoint**: `/api/getInteractions`
 - **Method**: POST
-- **Description**: Retrieves interactions based on the provided URL, start timestamp, and end timestamp.
+- **Description**: Retrieves interactions based on the provided URL, start timestamp, and end timestamp as request body in json format.
 - **Request Example**:
 
     ```json
